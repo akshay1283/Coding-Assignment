@@ -1,0 +1,22 @@
+<script>function insertionSortDescending(arr) {
+    const n = arr.length;
+
+    for (let i = 1; i < n; i++) {
+        let key = arr[i];
+        let j = i - 1;
+
+        while (j >= 0 && arr[j] < key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+
+        arr[j + 1] = key;
+    }
+}
+
+const arr = [5, 3, 1, 4, 2];
+
+insertionSortDescending(arr);
+
+console.log(arr); // Output: [5, 4, 3, 2, 1]
+</script>
